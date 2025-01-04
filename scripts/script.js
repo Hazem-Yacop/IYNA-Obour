@@ -123,44 +123,102 @@ closeNavButton.addEventListener("click", () => {
 });
 
 /****************************************************
-  Flatten "About" & "Research" Submenus on Mobile
+  PART 1: Store Original HTML
 ****************************************************/
-function transformDropdownsForMobile() {
-  if (window.innerWidth <= 768) {
-    // Flatten "About"
-    const navAbout = document.getElementById("nav-about");
-    if (navAbout) {
-      const aboutSub = document.getElementById("about-sub");
-      if (aboutSub) {
-        const subItems = aboutSub.querySelectorAll("li");
-        mainNavList.removeChild(navAbout);
-        subItems.forEach(subItem => {
-          // Add the nav-item class to look consistent
-          subItem.classList.add("nav-item");
-          mainNavList.appendChild(subItem.cloneNode(true));
-        });
-      }
-    }
-    // Flatten "Research"
-    const navResearch = document.getElementById("nav-research");
-    if (navResearch) {
-      const researchSub = document.getElementById("research-sub");
-      if (researchSub) {
-        const subItems = researchSub.querySelectorAll("li");
-        mainNavList.removeChild(navResearch);
-        subItems.forEach(subItem => {
-          subItem.classList.add("nav-item");
-          mainNavList.appendChild(subItem.cloneNode(true));
-        });
-      }
-    }
+let originalNavHTML = ""; // Will store the original <ul> content
+let navFlattened = false; // Track if we are currently flattened
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Once the DOM is loaded, store the original nav HTML
+  const mainNavList = document.getElementById("main-nav-list");
+  if (mainNavList) {
+    originalNavHTML = mainNavList.innerHTML; 
+  }
+  
+  // Now run your usual initializations
+  AOS.init({ once: true, offset: 120, duration: 800 });
+  transformDropdownsOnResize(); // Check initial size, flatten or revert as needed
+  setupHamburgerClose();        // e.g., close overlay on item click, etc.
+});
+
+/****************************************************
+  PART 2: Flatten/Revert on Resize
+****************************************************/
+window.addEventListener("resize", transformDropdownsOnResize);
+
+function transformDropdownsOnResize() {
+  const width = window.innerWidth || document.documentElement.clientWidth;
+  
+  // If width <= 768 and not already flattened
+  if (width <= 768 && !navFlattened) {
+    flattenDropdowns();
+  }
+  // If width > 768 and we are flattened
+  else if (width > 768 && navFlattened) {
+    revertDropdowns();
   }
 }
 
 /****************************************************
-  Close Hamburger Menu on Any Nav Item Click
+  Flatten "About" & "Research" on Mobile
 ****************************************************/
-function setupNavItemClick() {
+function flattenDropdowns() {
+  const mainNavList = document.getElementById("main-nav-list");
+  if (!mainNavList) return;
+  
+  const navAbout = document.getElementById("nav-about");
+  const navResearch = document.getElementById("nav-research");
+  
+  // Flatten "About"
+  if (navAbout) {
+    const aboutSub = document.getElementById("about-sub");
+    if (aboutSub) {
+      const subItems = aboutSub.querySelectorAll("li");
+      mainNavList.removeChild(navAbout);
+      subItems.forEach(subItem => {
+        subItem.classList.add("nav-item");
+        mainNavList.appendChild(subItem.cloneNode(true));
+      });
+    }
+  }
+
+  // Flatten "Research"
+  if (navResearch) {
+    const researchSub = document.getElementById("research-sub");
+    if (researchSub) {
+      const subItems = researchSub.querySelectorAll("li");
+      mainNavList.removeChild(navResearch);
+      subItems.forEach(subItem => {
+        subItem.classList.add("nav-item");
+        mainNavList.appendChild(subItem.cloneNode(true));
+      });
+    }
+  }
+  
+  navFlattened = true;
+}
+
+/****************************************************
+  Revert to Original Nav
+****************************************************/
+function revertDropdowns() {
+  const mainNavList = document.getElementById("main-nav-list");
+  if (!mainNavList || !originalNavHTML) return;
+  
+  // Simply restore the nav to the original HTML
+  mainNavList.innerHTML = originalNavHTML;
+  navFlattened = false;
+}
+
+/****************************************************
+  PART 3: Additional Logic
+  e.g., hamburger close on nav item click
+****************************************************/
+function setupHamburgerClose() {
+  const navLinks = document.getElementById("nav-links");
+  const mainNavList = document.getElementById("main-nav-list");
+  
+  // If a user clicks a link, close hamburger
   const navItems = document.querySelectorAll("#main-nav-list li a");
   navItems.forEach(item => {
     item.addEventListener("click", () => {
@@ -169,3 +227,13 @@ function setupNavItemClick() {
     });
   });
 }
+
+/****************************************************
+  The rest of your code (particles, modal, etc.)
+****************************************************/
+// e.g., your Particles, Fade-In, Sticky Nav, etc.
+/****************************************************/
+// For clarity, I've left out your existing code here.
+// Make sure to integrate your existing logic (particles config, modal code, etc.)
+// around these lines so everything coexists properly.
+
