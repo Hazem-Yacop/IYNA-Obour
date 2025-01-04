@@ -184,21 +184,20 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background: rgba(0,1,19,0.8);
+  background: #fff;
   padding: 1em;
   display: none;
   flex-direction: column;
   gap: 0.5em;
-  border-radius: 0.3em;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
   width: auto;
-  min-width: 8em;
+  min-width: 10em;
 }
 
 .dropdown-menu li a {
-  color: #fff;
+  color: #000000;
   font-size: 0.9em;
   text-transform: none;
   position: relative;
@@ -634,7 +633,7 @@ body {
   margin: 10% auto;
   padding: 20px;
   border-radius: 10px;
-  width: 60%;
+  width: 80%;
   max-width: 800px;
   text-align: left;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -925,11 +924,11 @@ body {
     font-size: 0.7em;
   }
   .btn {
-    min-width: 12em;
+    min-width: 17em;
     font-size: 0.9em;
   }
   .btn::before {
-    min-width: 10em;
+    min-width: 16em;
     height: 1em;
   }
   .hero-scroll {
@@ -966,6 +965,10 @@ body {
   }
   .team-member-card {
     width: 10em;
+  }
+  .member-image {
+    width: 10em;
+    height: 10em;
   }
   #contact-section {
     padding: 4em;
