@@ -101,15 +101,14 @@ closeNavButton.addEventListener("click", () => {
   navList.classList.remove("show-menu");
 });
 
+/* Dropdown: always open on click, for both mobile & desktop */
 const dropdownItems = document.querySelectorAll(".dropdown");
 dropdownItems.forEach(item => {
   item.addEventListener("click", e => {
-    if (window.innerWidth <= 768) {
-      const submenu = item.querySelector(".dropdown-menu");
-      if (submenu) {
-        submenu.classList.toggle("show-submenu");
-        e.stopPropagation();
-      }
+    e.preventDefault(); // Prevent link jump if needed
+    const submenu = item.querySelector(".dropdown-menu");
+    if (submenu) {
+      submenu.classList.toggle("show-submenu");
     }
   });
 });
