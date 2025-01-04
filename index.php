@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="IYNA Obour Chapter official website: bridging neuroscience education for youth in Obour and beyond.">
+  <meta name="keywords" content="neuroscience, youth, IYNA, Obour, research, education">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IYNA Obour Chapter Official Website</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://kit.fontawesome.com/82432b4eb3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header / Hero -->
+    <header id="site-header">
+      <div id="particles-js"></div>
+      <nav class="site-navigation" data-aos="fade-down" data-aos-duration="1000">
+        <div class="nav-brand">
+          <a href="./index.php">
+            <img src="./assets/IYNA-logo.png" alt="IYNA Obour Chapter Logo">
+          </a>
+        </div>
+        <div class="hamburger" id="hamburger-menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="nav-links" id="nav-links">
+          <ul class="nav-list">
+            <li class="nav-item dropdown">
+              <a href="#">About</a>
+              <ul class="dropdown-menu">
+                <li><a href="#vision-section">Vision &amp; Mission</a></li>
+                <li><a href="#team-section">Our Team</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#">Research</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Magazines</a></li>
+                <li><a href="#">Papers</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="#">Resources</a></li>
+            <li class="nav-item"><a href="#">Competitions</a></li>
+            <li class="nav-item"><a href="#">Programs</a></li>
+            <li class="nav-item"><a href="#">Events</a></li>
+          </ul>
+        </div>
+      </nav>
+      <section class="hero-banner" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="hero-heading">
+          International Youth Neuroscience Association <br>
+          <span class="hero-highlight">OBOUR CHAPTER</span>
+        </h1>
+        <h2 class="hero-tagline">
+          Expanding access to neuroscience education by addressing and
+          overcoming socioeconomic and geographic obstacles
+        </h2>
+        <div class="hero-cta">
+          <a href="#">
+            <button class="btn btn-primary">Join Our Community</button>
+          </a>
+          <a href="#">
+            <button class="btn btn-secondary">Explore Our Programs</button>
+          </a>
+        </div>
+      </section>
+      <div class="hero-scroll">
+        <a href="#about-section" id="hero-scroll-btn">
+          <button>↓</button>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- About Us Section -->
+      <section class="fade-section" id="about-section" data-aos="fade-up" data-aos-duration="1000">
+        <div class="about-intro">
+          <h2 class="about-title">About Us</h2>
+          <p class="about-description">
+            The Obour Chapter of the International Youth Neuroscience Association drives real impact through hands-on neuroscience education, mental health advocacy, and innovative research. By offering workshops, research opportunities, and community outreach, the chapter empowers youth to explore brain sciences and address mental health challenges.
+            <br><br>
+            With a focus on inclusivity and real-world application, the chapter inspires the next generation of neuroscience leaders, fostering meaningful change within Obour and beyond. Meet the dedicated team behind this transformative mission below!
+          </p>
+        </div>
+        <img src="./assets/about-us-image.png" alt="Neural network illustration">
+      </section>
+
+      <!-- Vision & Mission Section -->
+      <section class="fade-section" id="vision-section" data-aos="fade-up" data-aos-duration="1000">
+        <img src="./assets/our-vision-image.png" alt="Neural network illustration">
+        <div class="vision-container">
+          <h2 class="vision-title">Our Vision &amp; Mission</h2>
+          <p class="vision-description">
+            Our vision is to empower the youth to explore and advance neuroscience, promoting innovation, collaboration, and inclusivity in understanding the brain and its mechanisms. We strive to create a community where knowledge meets curiosity, enabling young minds to make a meaningful impact on the future of science and society.
+            <br><br>
+            Our mission is to inspire and support young individuals in their pursuit of neuroscience education and research. We aim to provide resources, mentorships, and opportunities for collaboration, promoting scientific curiosity, critical thinking, and community engagement. Through workshops, events, and partnerships, we strive to nurture the next generation of neuroscience leaders and advocates.
+          </p>
+        </div>
+      </section>
+
+      <!-- Meet the Team Section -->
+      <section class="fade-section" id="team-section" data-aos="fade-up" data-aos-duration="1000">
+        <div class="team-intro">
+          <h4>Team Section</h4>
+          <h2>Our Executive Team</h2>
+          <h3>
+            ❝ Teamwork transforms visions into reality, making extraordinary
+            achievements possible ❞
+          </h3>
+        </div>
+        <div class="team-list">
+          <div class="team-row">
+            <div class="team-member-card" id="card1">
+              <img src="./assets/yousef-salah.png" alt="Yousef Salah" class="member-image">
+              <div class="member-info highlight-frame">
+                <div class="member-role">CEO</div>
+                <div class="member-name">Youssef M. Salah</div>
+                <div class="member-socials gold-hover">
+                  <a href="https://wa.me/+201026724048?text=Hi Yousef, I came from IYNA Obour Chapter website" target="_blank" class="member-whatsapp">
+                    <i class="fa-brands fa-square-whatsapp"></i>
+                  </a>
+                  <a href="mailto:youssef.2123070@stemobour.moe.edu.eg" class="member-email">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a class="member-info-trigger"
+                     onclick="openModal('Youssef M. Salah','CEO','A Junior high school student, Obour STEM School. <br><br>I am passionate about neuroscience & research. I have always been driven by curiosity & commitment, which pushes me to explore new ideas and push my limits to make the most of every opportunity. Leadership to me is about insight, resilience and passion.','./assets/yousef-salah.png')">
+                    <i class="fa-solid fa-circle-info"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="team-member-card" id="card2">
+              <img src="./assets/yousef-mounir.png" alt="Yousef Mounir" class="member-image">
+              <div class="member-info highlight-frame">
+                <div class="member-role">President &amp; Director</div>
+                <div class="member-name">Yousif Mounir</div>
+                <div class="member-socials gold-hover">
+                  <a href="https://wa.me/+201026724048?text=Hi Yousef, I came from IYNA Obour Chapter website" target="_blank" class="member-whatsapp">
+                    <i class="fa-brands fa-square-whatsapp"></i>
+                  </a>
+                  <a href="mailto:yousif.2122070@stemobour.moe.edu.eg" class="member-email">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a class="member-info-trigger"
+                     onclick="openModal('Yousef Mounir','President & Director','Senior High-School Student, Obour STEM School <br><br> I\'m an artist with a profound passion for neuropsychiatry and the human condition. Through my work, I aim to reveal the complexities of human experience, bridging science and creativity.','./assets/yousef-mounir.png')">
+                    <i class="fa-solid fa-circle-info"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="team-row">
+            <div class="team-member-card" id="card3">
+              <img src="./assets/habiba-roushdy.png" alt="Habiba Roushdy" class="member-image">
+              <div class="member-info">
+                <div class="member-role">Vice Presedent</div>
+                <div class="member-name">Habiba Roushdy</div>
+                <div class="member-socials">
+                  <a href="mailto:habiba.2123524@stemobour.moe.edu.eg" class="member-email">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a class="member-info-trigger"
+                     onclick="openModal('Habiba Roushdy','Vice Presedent','The Vice President of IYNA Obour, she is dedicated to make a positive impact in life. Always love to explore new experiences passionate about neuroscience and aspires to be well-versed in it, she wrote an article on the relationship between neuroscience and psychology, highlighting their interconnectedness in understanding human behaviour.','./assets/habiba-roushdy.png')">
+                    <i class="fa-solid fa-circle-info"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="team-member-card" id="card4">
+              <img src="./assets/hazem-karam.png" alt="Hazem Karam" class="member-image">
+              <div class="member-info">
+                <div class="member-role">Web Developer</div>
+                <div class="member-name">Hazem Karam</div>
+                <div class="member-socials">
+                  <a href="https://wa.me/+201026724048?text=Hi Hazem, I came from IYNA Obour Chapter website" target="_blank" class="member-whatsapp">
+                    <i class="fa-brands fa-square-whatsapp"></i>
+                  </a>
+                  <a href="mailto:hazemyacopbusiness@gmail.com" class="member-email">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a class="member-info-trigger"
+                     onclick="openModal('Hazem Karam','Web Developer','The Web Developer Of IYNA Obour Website!','./assets/hazem-karam.png')">
+                    <i class="fa-solid fa-circle-info"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="team-member-card" id="card5">
+              <img src="./assets/kenzy-hesham.png" alt="Kenzy Hesham" class="member-image">
+              <div class="member-info">
+                <div class="member-role">Vice Presedent</div>
+                <div class="member-name">Kenzy Hesham</div>
+                <div class="member-socials">
+                  <a href="mailto:kenzy.2123550@stemobour.moe.edu.eg" class="member-email">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a class="member-info-trigger"
+                     onclick="openModal('Kenzy Hesham','Vice Presedent','This is Kenzy Hesham, Vice President of IYNA Obour Chapter, interestingly passionate about neuroscience. My focus is on creating a collaborative environment where members can share ideas and learn together. Together, we\'re passionate about exploring the mysteries of the mind!','./assets/kenzy-hesham.png')">
+                    <i class="fa-solid fa-circle-info"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="team-row">
+            <div class="team-member-card" id="card6">
+              <img src="./assets/ans-abdeltawab.png" alt="Ans Abdeltawab" class="member-image">
+              <div class="member-info">
+                <div class="member-role">Head Graphic Design</div>
+                <div class="member-name">Ans Abdeltawab</div>
+                <div class="member-socials">
+                  <a href="https://wa.me/+201111257045?text=Hi Ans, I came from IYNA Obour Chapter website" target="_blank" class="member-whatsapp">
+                    <i class="fa-brands fa-square-whatsapp"></i>
+                  </a>
+                  <a href="mailto:ansamar406@gmail.com" class="member-email">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a class="member-info-trigger"
+                     onclick="openModal('Ans Abdeltawab','Head Graphic Design','I am passionate about medical engineering and strongly dedicated to digital art and graphic design. As a graphic designer for over 11 clubs and organizations, I’ve honed my creative skills while maintaining a focus on innovation in my engineering pursuits. My curiosity and commitment drive me to excel in both technical and artistic fields. To me, leadership is about resilience, adaptability, and empowering others to succeed','./assets/ans-abdeltawab.png')">
+                    <i class="fa-solid fa-circle-info"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="team-member-card" id="card7">
+              <img src="./assets/ahmed-samy.png" alt="Ahmed Samy" class="member-image">
+              <div class="member-info">
+                <div class="member-role">Head Video Editing</div>
+                <div class="member-name">Ahmed Samy</div>
+                <div class="member-socials">
+                  <a href="https://wa.me/+201097042911?text=Hi Ahmed, I came from IYNA Obour Chapter website" target="_blank" class="member-whatsapp">
+                    <i class="fa-brands fa-square-whatsapp"></i>
+                  </a>
+                  <a href="mailto:ahmedsamy1758@gmail.com" class="member-email">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a class="member-info-trigger"
+                     onclick="openModal('Ahmed Samy','Head Video Editing','I\'m an innovator and tech enthusiast who loves bringing knowledge, creativity, and storytelling together On my YouTube channel. My passion is to connect science, creativity, and personal growth by making valuable videos by utilising my skills in video editing.','./assets/ahmed-samy.png')">
+                    <i class="fa-solid fa-circle-info"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="team-member-card" id="card8">
+              <img src="./assets/ahmed mahrous.png" alt="Ahmed Mahrous" class="member-image">
+              <div class="member-info">
+                <div class="member-role">Vice Head Academics</div>
+                <div class="member-name">Ahmed Mahrous</div>
+                <div class="member-socials">
+                  <a href="#" class="member-email">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a href="#" class="member-info-trigger">
+                    <i class="fa-solid fa-circle-info"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="team-member-card" id="card9">
+              <img src="./assets/yahia-abdelaziz.png" alt="Yahia Abdelaziz" class="member-image">
+              <div class="member-info">
+                <div class="member-role">Head Academics</div>
+                <div class="member-name">Yahia Abdelaziz</div>
+                <div class="member-socials">
+                  <a href="#" class="member-email">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a href="#" class="member-info-trigger">
+                    <i class="fa-solid fa-circle-info"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="fade-section" id="contact-section" data-aos="fade-up" data-aos-duration="1000">
+        <div class="contact-intro">
+          <h2 class="contact-title">Contact Us</h2>
+          <h3 class="contact-subtitle">Send us a message, we will get back to you</h3>
+        </div>
+        <form action="#" class="contact-form" id="contact-form">
+          <div class="contact-row">
+            <div class="contact-field-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" required>
+            </div>
+            <div class="contact-field-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" required>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-field-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required>
+            </div>
+            <div class="contact-field-group">
+              <label for="phone-number">Phone Number</label>
+              <input type="text" id="phone-number" required>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-field-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="4" required></textarea>
+            </div>
+          </div>
+          <input type="submit" value="Submit Message">
+        </form>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section class="fade-section" id="newsletter-section" data-aos="fade-up" data-aos-duration="1000">
+        <div class="newsletter-header">
+          <img src="./assets/newsletter-image.png" alt="IYNA Newsletter">
+          <h2 class="newsletter-heading">
+            Subscribe To Our <br>
+            <span class="newsletter-highlight" id="newsletter-title">Newsletter</span>
+          </h2>
+        </div>
+        <div class="newsletter-form-container">
+          <form action="#" class="newsletter-form" id="newsletter-form">
+            <input type="email" placeholder="Email Address" class="newsletter-email" id="newsletter-email" required>
+            <input type="submit" class="newsletter-submit" id="newsletter-submit" value="Subscribe">
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+      <div class="footer-links">
+        <div class="footer-column">
+          <h3>Articles</h3>
+          <ul>
+            <li><a href="#">Article 1</a></li>
+            <li><a href="#">Article 2</a></li>
+            <li><a href="#">Article 3</a></li>
+            <li><a href="#">Article 4</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Courses</h3>
+          <ul>
+            <li><a href="#">Course 1</a></li>
+            <li><a href="#">Course 2</a></li>
+            <li><a href="#">Course 3</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Competitions</h3>
+          <ul>
+            <li><a href="#">Competition 1</a></li>
+            <li><a href="#">Competition 2</a></li>
+            <li><a href="#">Competition 3</a></li>
+            <li><a href="#">Competition 4</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Events</h3>
+          <ul>
+            <li><a href="#">Event 1</a></li>
+            <li><a href="#">Event 2</a></li>
+            <li><a href="#">Event 3</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>About</h3>
+          <ul>
+            <li><a href="#">Team Members</a></li>
+            <li><a href="#">History</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-center">
+        <img src="./assets/IYNA-logo.png" alt="IYNA Obour Chapter" class="footer-logo">
+        <p>© 2024 Iyna Obour. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Team Modal -->
+    <div id="team-modal" class="team-modal">
+      <div class="team-modal-content">
+        <span id="team-modal-close" onclick="closeModal()">&times;</span>
+        <img src="" id="team-modal-image" alt="Team member image">
+        <div class="team-modal-text">
+          <div id="team-modal-name"></div>
+          <div id="team-modal-role"></div>
+          <p id="team-modal-details"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./scripts/script.js"></script>
+  </div>
+</body>
+</html>
