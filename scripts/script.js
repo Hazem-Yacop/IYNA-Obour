@@ -1,3 +1,6 @@
+/****************************************************
+  Particles Configuration
+****************************************************/
 particlesJS("particles-js", {
   particles: {
     number: { value: 100, density: { enable: true, value_area: 1000 } },
@@ -35,6 +38,9 @@ particlesJS("particles-js", {
   retina_detect: true
 });
 
+/****************************************************
+  Modal Handling
+****************************************************/
 function openModal(name, role, details, image) {
   const modal = document.getElementById("team-modal");
   document.getElementById("team-modal-name").innerText = name;
@@ -56,6 +62,9 @@ window.onclick = function (event) {
   }
 };
 
+/****************************************************
+  Fade-In Sections on Scroll
+****************************************************/
 const fadeSections = document.querySelectorAll(".fade-section");
 window.addEventListener("scroll", () => {
   fadeSections.forEach(section => {
@@ -66,14 +75,23 @@ window.addEventListener("scroll", () => {
   });
 });
 
+/****************************************************
+  AOS Initialization
+****************************************************/
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init({
     once: true,
     offset: 120,
     duration: 800
   });
+  
+  transformDropdownsForMobile(); // Flatten submenus for mobile
+  setupNavItemClick();          // Close hamburger on nav item click
 });
 
+/****************************************************
+  Sticky Navbar on Scroll
+****************************************************/
 document.addEventListener("scroll", function () {
   const hero = document.querySelector(".hero-banner");
   const nav = document.querySelector(".site-navigation");
@@ -86,29 +104,68 @@ document.addEventListener("scroll", function () {
   }
 });
 
+/****************************************************
+  Hamburger Menu for Mobile
+****************************************************/
 const hamburger = document.getElementById("hamburger-menu");
 const navLinks = document.getElementById("nav-links");
 const closeNavButton = document.getElementById("close-nav");
-const navList = document.querySelector(".nav-list");
+const mainNavList = document.getElementById("main-nav-list");
 
 hamburger.addEventListener("click", () => {
   navLinks.classList.add("show-links");
-  navList.classList.add("show-menu");
+  mainNavList.classList.add("show-menu");
 });
 
 closeNavButton.addEventListener("click", () => {
   navLinks.classList.remove("show-links");
-  navList.classList.remove("show-menu");
+  mainNavList.classList.remove("show-menu");
 });
 
-/* Dropdown: always open on click, for both mobile & desktop */
-const dropdownItems = document.querySelectorAll(".dropdown");
-dropdownItems.forEach(item => {
-  item.addEventListener("click", e => {
-    e.preventDefault(); // Prevent link jump if needed
-    const submenu = item.querySelector(".dropdown-menu");
-    if (submenu) {
-      submenu.classList.toggle("show-submenu");
+/****************************************************
+  Flatten "About" & "Research" Submenus on Mobile
+****************************************************/
+function transformDropdownsForMobile() {
+  if (window.innerWidth <= 768) {
+    // Flatten "About"
+    const navAbout = document.getElementById("nav-about");
+    if (navAbout) {
+      const aboutSub = document.getElementById("about-sub");
+      if (aboutSub) {
+        const subItems = aboutSub.querySelectorAll("li");
+        mainNavList.removeChild(navAbout);
+        subItems.forEach(subItem => {
+          // Add the nav-item class to look consistent
+          subItem.classList.add("nav-item");
+          mainNavList.appendChild(subItem.cloneNode(true));
+        });
+      }
     }
+    // Flatten "Research"
+    const navResearch = document.getElementById("nav-research");
+    if (navResearch) {
+      const researchSub = document.getElementById("research-sub");
+      if (researchSub) {
+        const subItems = researchSub.querySelectorAll("li");
+        mainNavList.removeChild(navResearch);
+        subItems.forEach(subItem => {
+          subItem.classList.add("nav-item");
+          mainNavList.appendChild(subItem.cloneNode(true));
+        });
+      }
+    }
+  }
+}
+
+/****************************************************
+  Close Hamburger Menu on Any Nav Item Click
+****************************************************/
+function setupNavItemClick() {
+  const navItems = document.querySelectorAll("#main-nav-list li a");
+  navItems.forEach(item => {
+    item.addEventListener("click", () => {
+      navLinks.classList.remove("show-links");
+      mainNavList.classList.remove("show-menu");
+    });
   });
-});
+}
