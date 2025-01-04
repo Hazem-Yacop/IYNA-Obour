@@ -88,8 +88,17 @@ document.addEventListener("scroll", function () {
 
 const hamburger = document.getElementById("hamburger-menu");
 const navLinks = document.getElementById("nav-links");
+const closeNavButton = document.getElementById("close-nav");
+const navList = document.querySelector(".nav-list");
+
 hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("show-links");
+  navLinks.classList.add("show-links");
+  navList.classList.add("show-menu");
+});
+
+closeNavButton.addEventListener("click", () => {
+  navLinks.classList.remove("show-links");
+  navList.classList.remove("show-menu");
 });
 
 const dropdownItems = document.querySelectorAll(".dropdown");
